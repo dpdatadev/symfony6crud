@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}LinkElement{% endblock %}
+
+{% block body %}
+    <h1>LinkElement</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ link_element.id }}</td>
+            </tr>
+            <tr>
+                <th>Link</th>
+                <td>{{ link_element.link }}</td>
+            </tr>
+            <tr>
+                <th>Text</th>
+                <td>{{ link_element.text }}</td>
+            </tr>
+            <tr>
+                <th>Category</th>
+                <td>{{ link_element.category }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_link_element_index') }}">back to list</a>
+
+    <a href="{{ path('app_link_element_edit', {'id': link_element.id}) }}">edit</a>
+
+    {{ include('link_element/_delete_form.html.twig') }}
+{% endblock %}
