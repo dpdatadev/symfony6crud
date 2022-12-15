@@ -13,4 +13,4 @@ example "link element" entity representing a simple link, description, and categ
 
 functional tests included for the crud entity (no security tests)
 
-ready to go template
+ready to go template!
